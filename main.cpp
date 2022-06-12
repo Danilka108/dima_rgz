@@ -367,7 +367,6 @@ void createBinFileFromTxt(const char *destPath, const char *srcPath) {
 }
 
 int main() {
-  /*
   createBinFileFromTxt("test_1_src_1.bin", "test_1_src_1.txt");
   createBinFileFromTxt("test_1_src_2.bin", "test_1_src_2.txt");
   createBinFileFromTxt("test_1_src_3.bin", "test_1_src_3.txt");
@@ -378,7 +377,6 @@ int main() {
 
   createBinFileFromTxt("test_3_src_1.bin", "test_3_src_1.txt");
   createBinFileFromTxt("test_3_src_2.bin", "test_3_src_2.txt");
-  */
 
   sortFilesWords(TXT_FILE, "test_1_dest.txt", sortByAscending,
                  "test_1_src_1.txt", "test_1_src_2.txt", "test_1_src_3.txt",
