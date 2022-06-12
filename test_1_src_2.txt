@@ -1,0 +1,7 @@
+char* read_string(FILE* file, File_string* file_string) {
+    char* str = new char[file_string->len + 1];
+    fseek(file, file_string->offset, SEEK_SET);
+    fread(str, sizeof(char), file_string->len, file);
+    str[file_string->len] = '\0';
+    return str;
+}

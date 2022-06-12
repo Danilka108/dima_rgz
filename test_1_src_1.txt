@@ -1,0 +1,22 @@
+struct File_metadata {
+    File_string* strings;
+    int len;
+    File_metadata(int _len = 0) {
+        strings = new File_string[_len];
+        len = _len;
+    }
+    ~File_metadata() {
+        if (len != 0)
+            delete[] strings;
+    }
+};
+void push_string(File_metadata* metadata, File_string string) {
+    File_string* new_strings = new File_string[metadata->len + 1];
+    for (int i = 0; i < metadata->len; i++)
+        new_strings[i] = metadata->strings[i];
+    new_strings[metadata->len] = string;
+    if (metadata->len != 0)
+        delete[] metadata->strings;
+    metadata->strings = new_strings;
+    metadata->len += 1;
+}
